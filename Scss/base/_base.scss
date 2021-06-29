@@ -1,1 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Viaoda+Libre&display=swap');
+
+$colors: (
+    primary: #59788e,
+    secondary: #022d36,
+    tertiary: #373737,
+    quaternary: #e8e4c9
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$fonts: (
+    primary-font: 'Jomhuria',
+    secondary-font: 'Viaoda Libre'
+);
+
+@function font($font-style) {
+    @return map-get($fonts, $font-style);
+}
+
+$font-sizes: (
+    xs: 1.6rem,
+    sm: 1.8rem,
+    md: 2rem,
+    lg: 3rem,
+    xl: 6rem
+);
+
+@function size($size) {
+    @return map-get($font-sizes, $size);
+}
+
